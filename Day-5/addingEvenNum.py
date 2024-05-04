@@ -1,4 +1,4 @@
-target = int(input("Enter a number between 0 and 1000: ")) 
+target = int(input("Enter a number between 2 and 1000: ")) 
 
 sumOfEvenNum = 0
 
