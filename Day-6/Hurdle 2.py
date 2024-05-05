@@ -5,8 +5,6 @@ def turn_right():
     turn_left()
     turn_left()
     
-noOfLaps = 6
-    
 def jump():
     move()
     turn_left()
@@ -16,12 +14,19 @@ def jump():
     turn_right()
     move()
     turn_left()
-    
-for lap in range(0, noOfLaps):
-    if(at_goal()):
-        done()
-    else:    
+
+### Solution-1
+
+while at_goal() != True:
         jump()
+
+### Solution-2
+# noOfLaps = 6
+# for lap in range(0, noOfLaps):
+#     if(at_goal()):
+#         done()
+#     else:    
+#         jump()
         
 
 
