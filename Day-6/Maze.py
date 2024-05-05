@@ -8,13 +8,11 @@ def turn_right():
 def jump():
     turn_right()
     move()
-    
-noOfLaps = 100000
-    
-for lap in range(0, noOfLaps):
-    if(at_goal()):
-        done()
-    elif(wall_in_front() and wall_on_right()):
+
+
+### Solution-1
+while at_goal() != True:
+    if(wall_in_front() and wall_on_right()):
        turn_left()
     elif(wall_on_right()):
        move()
@@ -24,6 +22,25 @@ for lap in range(0, noOfLaps):
        move()
     else:    
         move()
+
+
+
+
+### Solution-2
+# noOfLaps = 1000    
+# for lap in range(0, noOfLaps):
+#     if(at_goal()):
+#         done()
+#     elif(wall_in_front() and wall_on_right()):
+#        turn_left()
+#     elif(wall_on_right()):
+#        move()
+#     elif(right_is_clear()):
+#        jump()
+#     elif(front_is_clear()):
+#        move()
+#     else:    
+#         move()
         
 
 
