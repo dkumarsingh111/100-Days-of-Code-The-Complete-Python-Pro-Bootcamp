@@ -5,7 +5,7 @@ def turn_right():
     turn_left()
     turn_left()
     
-noOfLaps = 1000
+
     
 def jump():
     turn_left()
@@ -15,14 +15,24 @@ def jump():
     turn_right()
     move()
     turn_left()
-    
-for lap in range(0, noOfLaps):
-    if(at_goal()):
-        done()
-    elif(wall_in_front()):
+
+### Solution-1
+while at_goal() != True:
+    if(wall_in_front()):
        jump()
     else:    
         move()
+
+
+### Solution-2
+# noOfLaps = 1000    
+# for lap in range(0, noOfLaps):
+#     if(at_goal()):
+#         done()
+#     elif(wall_in_front()):
+#        jump()
+#     else:    
+#         move()
         
 
 
