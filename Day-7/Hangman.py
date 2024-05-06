@@ -82,7 +82,7 @@ end_of_game = False
 lives = len(stages)
 
 word_list = ['ardvark', 'baboon', 'camel', 'abortion', 'about', 'above', 'abroad', 'absence', 'absolute', 'absolutely', 'absorb', 'abuse', 'academic', 'accept', 'access', 'accident', 
-'accompany', 'accomplish', 'according', 'account', 'accurate', 'accuse', 'achieve', 'achievement', 'acid', 'acknowledge', 'acquire', 'across']
+             'accompany', 'accomplish', 'according', 'account', 'accurate', 'accuse', 'achieve', 'achievement', 'acid', 'acknowledge', 'acquire', 'across']
 
 chosen_word = random.choice(word_list)
 word = []
@@ -103,6 +103,7 @@ while not end_of_game and lives > 0:
 
     if guess not in chosen_word:
         lives -= 1
+        print(f"You guessed {guess}, that's not in the word. You lose a life. Available live(s) is/are {lives}.")
         print(stages[lives])
         if lives == 0:
             print("You Loss!\n")
