@@ -94,24 +94,26 @@ print(f"\n Guess word: {word} \n \n")
 
 while not end_of_game and lives > 0:
     guess = input("Guess a Letter: ").lower()
-
-    for position in range(len(chosen_word)):
-        letter = chosen_word[position]
-        if(letter == guess):
-            word[position] = letter
+    if guess in word:
+        print(f"You've already guessed {guess}.")
+    else:
+        for position in range(len(chosen_word)):
+            letter = chosen_word[position]
+            if(letter == guess):
+                word[position] = letter
                 
 
-    if guess not in chosen_word:
-        lives -= 1
-        print(f"You guessed {guess}, that's not in the word. You lose a life. Available live(s) is/are {lives}.")
-        print(stages[lives])
-        if lives == 0:
-            print("You Loss!\n")
+        if guess not in chosen_word:
+            lives -= 1
+            print(f"You guessed {guess}, that's not in the word. You lose a life. Available live(s) is/are {lives}.")
+            print(stages[lives])
+            if lives == 0:
+                print("You Loss!\n")
 
-    if guess in chosen_word:
-        print(f"{' '.join(word)}") 
+        if guess in chosen_word:
+            print(f"{' '.join(word)}\n") 
 
-    if "_" not in word:
-        end_of_game = True
-        print("\nYou Win!\n")
+        if "_" not in word:
+            end_of_game = True
+            print("\nYou Win!\n")   
                
