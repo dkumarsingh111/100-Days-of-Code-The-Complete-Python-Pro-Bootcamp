@@ -2,34 +2,53 @@ alphabets = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n
              's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
 
-direction = input("Type 'encode' to encrypt, type 'decode' to decrypt: ")
-text = input("Enter your message: ").lower()
-shift = int(input("Type the shift number: "))
-encodedText = ''
-decodedText = ''
- 
-
-def encode_function(text, shift):
+#Encrypt Function
+def encrypt(text, shift):
+    encrypedText = ''
     for char in text:
-        index = alphabets.index(char)
-        encodedText += alphabets[index + shift]
+        if char in alphabets:
+           index = alphabets.index(char)
+           position = index + shift
+           while position > 25:
+              position -= 26
+
+           encrypedText += alphabets[position]
+        else:
+           encrypedText += char  
                              
-    print(f"Encoded secret message: {encodedText}")
+    print(f"Encoded message: {encrypedText}")
 
+#Decrypt Function
+def decrypt(text, shift):
+    decryptedText = ''
+    for char in text:
+        if char in alphabets:
+          index = alphabets.index(char)
+          position = index - shift
+          while position < 0:
+            position += 26
 
-def decode_function(text, shift):
-    for char in encodedText:
-        index = alphabets.index(char)
-        decodedText += alphabets[index - shift]
+          decryptedText += alphabets[position]
+        else:
+           decryptedText += char
 
-    print(f"Decoded secret message: {decodedText}")   
+    print(f"Decoded secret message: {decryptedText}")   
 
+is_continue = "yes"
 
+while is_continue == "yes":
+  direction = input("Type 'encode' to encrypt, type 'decode' to decrypt: ")
+  text = input("Enter your message: ").lower()
+  shift = int(input("Type the shift number: "))
 
+  if(direction == "encode"):
+    encrypt(text, shift) 
+  elif(direction == "decode"):
+    decrypt(text, shift)
+  else:
+    print("Enter correct direction!")
+    
+  is_continue = input("Type 'yes' if you want to go again. Otherwise type 'no': ").lower()  
 
-if(direction == "encode"):
-  encode_function(text, shift)
-elif(direction == "decode"):
-  decode_function(text, shift)
-else:
-  print("Enter correct direction!")
+  if(is_continue == 'no'):
+     print("Good Bye!")
