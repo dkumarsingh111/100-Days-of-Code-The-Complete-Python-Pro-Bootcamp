@@ -7,11 +7,11 @@ student_scores = {
 }
 
 for name in student_scores:
-    if student_scores[name] >= 91:
+    if student_scores[name] > 90:
         student_scores[name] = "Outstanding"
-    elif student_scores[name] >= 81 and student_scores[name] <= 90:
+    elif student_scores[name] > 80 and student_scores[name] <= 90:
         student_scores[name] = "Exceeds Expectations"
-    elif student_scores[name] >= 71 and student_scores[name] <= 80:
+    elif student_scores[name] > 70 and student_scores[name] <= 80:
         student_scores[name] = "Acceptable"
     else:
         student_scores[name] = "Fail"
