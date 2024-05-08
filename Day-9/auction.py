@@ -9,7 +9,7 @@ winner_name = ''
 
 while is_continue == "yes":
     name = input("What is your name?: ")
-    bid = input("What's your bid?: $")
+    bid = int(input("What's your bid?: $"))
 
     auction_record[name] = bid
 
