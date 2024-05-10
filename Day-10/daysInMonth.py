@@ -29,4 +29,5 @@ if month < 1 or month > 12:
     exit()
 
 days = days_in_month(year, month)
+
 print(f"{days} days in month {month} of the year {year}.")
