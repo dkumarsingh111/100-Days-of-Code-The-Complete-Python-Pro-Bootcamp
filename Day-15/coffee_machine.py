@@ -55,6 +55,8 @@ def process_coin(choice):
 
 
 
+
+     
 while is_machine_on:
     choice = input("What do you like? (espresso/ latte/ cappuccino): ")
     if choice == "off":
