@@ -3,6 +3,7 @@ import random
 
 is_race_on = False
 screen = Screen()
+screen.title("Turtle Racing Game!")
 screen.setup(width=500, height=400)
 user_bet = screen.textinput(title="make your bet", prompt="Which turtle will win the race? Enter a color: ")
 colors = ["red", "orange", "yellow", "green", "blue", "purple"]
@@ -25,11 +26,13 @@ while is_race_on:
             is_race_on = False
             winning_color = turtle.pencolor()
             if winning_color == user_bet:
+                screen.title(f"You've won! The {winning_color} turtle is the winner!")
                 print(f"You've won! The {winning_color} turtle is the winner!")
             else:
+                screen.title(f"You've lost! The {winning_color} turtle is the winner!")
                 print(f"You've lost! The {winning_color} turtle is the winner!")
         
-        random_distance = random.randint(0,5)
+        random_distance = random.randint(0,2)
         turtle.forward(random_distance)
 
 screen.exitonclick()
