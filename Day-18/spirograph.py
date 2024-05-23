@@ -4,7 +4,7 @@ from random import choice, randint
 timmy_the_turtle = turtle.Turtle()
 screen = turtle.Screen()
 turtle.colormode(255)
-timmy_the_turtle.speed("fastest")
+#timmy_the_turtle.speed("fastest")
 
 
 def random_color():
