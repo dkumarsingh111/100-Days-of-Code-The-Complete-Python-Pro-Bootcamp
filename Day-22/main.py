@@ -1,6 +1,7 @@
 from turtle import Screen, Turtle
 from paddle import Paddle
 from ball import Ball
+from scoreboard import Scoreboard
 import time
 
 screen = Screen()
@@ -12,6 +13,20 @@ screen.tracer(0)
 r_paddle = Paddle(350, 0)
 l_paddle = Paddle(-350, 0)
 ball = Ball()
+scoreboard = Scoreboard()
+
+#Create partition
+divider = Turtle("classic")
+divider.color("white")
+divider.penup()
+divider.goto(0, -300)
+divider.left(90)
+divider.hideturtle()
+for _ in range(30):
+    divider.forward(10)
+    divider.penup()
+    divider.forward(10)
+    divider.pendown()
 
 screen.listen()
 screen.onkey(r_paddle.go_up, "Up")
@@ -23,7 +38,7 @@ screen.onkey(l_paddle.go_down, "s")
 is_game_on = True
 
 while is_game_on:
-    time.sleep(0.1)
+    time.sleep(ball.move_speed)
     screen.update()
     ball.move()
 
@@ -39,8 +54,17 @@ while is_game_on:
 
 
     #Detect R paddle misses
-    if ball.xcor() > 380 or ball.xcor() < -380:
+    if ball.xcor() > 380:
         ball.reset_position()
+        scoreboard.l_point()
+
+    
+    #Detect L paddle misses
+    if ball.xcor() < -380:
+        ball.reset_position()
+        scoreboard.r_point()
+
+    
 
 
 screen.exitonclick()
