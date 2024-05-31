@@ -1,5 +1,4 @@
 #TODO: Create a letter using starting_letter.txt 
-
 with open("./Input/Letters/starting_letter.txt") as file:
     letter_content = file.read()
 
