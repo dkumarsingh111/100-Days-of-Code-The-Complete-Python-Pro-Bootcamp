@@ -1,6 +1,8 @@
 from turtle import Turtle
 
-FONT = ("Courier", 24, "normal")
+FONT = ("Courier", 14, "normal")
+GAME_OVER_FONT = ("Game Over", 80, "normal")
+FILE_PATH="d:/Deepak/100-Days-of-Code-The-Complete-Python-Pro-Bootcamp/Day-23"
 
 
 class Scoreboard(Turtle):
@@ -11,13 +13,23 @@ class Scoreboard(Turtle):
         self.color("black")
         self.penup()
         self.level = 1
+        with open(f"{FILE_PATH}/data.db") as file:
+            self.high_level = int(file.read())
         self.update_scoreboard()
         
 
     def update_scoreboard(self):
         self.clear()
-        self.goto(-280, 250)
-        self.write(f"Level: {self.level}", align="left", font=FONT)
+        self.goto(-280, 260)
+        self.write(f"Level: {self.level} Highest Level: {self.high_level}", align="left", font=FONT)
+
+
+    def reset(self):
+        if self.level > self.high_level:
+            self.high_level = self.level
+            with open(f"{FILE_PATH}/data.db", mode="w") as data:
+                data.write(f"{self.high_level}") 
+   
 
 
     def increase_level(self):
@@ -27,4 +39,5 @@ class Scoreboard(Turtle):
 
     def game_over(self):
         self.goto(0, 0)
-        self.write("Game Over!", align="center", font=FONT)
+        self.write("Game Over", align="center", font=GAME_OVER_FONT)
+        self.reset()

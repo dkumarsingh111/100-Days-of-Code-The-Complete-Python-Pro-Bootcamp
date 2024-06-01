@@ -3,7 +3,7 @@ from random import randint, choice
 
 COLORS = ["red", "orange", "yellow", "green", "blue", "purple"]
 STARTING_MOVE_DISTANCE = 5
-MOVE_INCREMENT = 2
+MOVE_INCREMENT = 10
 
 
 class CarManager:
@@ -14,7 +14,7 @@ class CarManager:
 
     
     def create_cars(self):
-        if randint(1, 6) == 1:
+        if randint(1, 5) == 1:
             new_car = Turtle("square")
             new_car.shapesize(stretch_len=2, stretch_wid=1)
             new_car.penup()
