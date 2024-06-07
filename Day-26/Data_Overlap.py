@@ -1,4 +1,4 @@
-FILE_PATH= "c:/Users/10278018/OneDrive - BD/100-Days-of-Code-The-Complete-Python-Pro-Bootcamp/Day-26"
+FILE_PATH= "c:/Users/100-Days-of-Code-The-Complete-Python-Pro-Bootcamp/Day-26"
 
 with open(file=f"{FILE_PATH}/file1.txt") as file1:
     file1_content = file1.readlines()
