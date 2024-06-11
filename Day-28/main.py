@@ -13,7 +13,7 @@ SHORT_BREAK_MIN = 5
 LONG_BREAK_MIN = 20
 reps = 0
 timer = None
-FILE_PATH="c:/Users/10278018/OneDrive - BD/100-Days-of-Code-The-Complete-Python-Pro-Bootcamp/Day-28/"
+FILE_PATH="c:/Users/100-Days-of-Code-The-Complete-Python-Pro-Bootcamp/Day-28/"
 
 
 # ---------------------------- TIMER RESET ------------------------------- #
