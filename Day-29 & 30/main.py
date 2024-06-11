@@ -4,6 +4,7 @@ from random import choice, randint, shuffle
 import pyperclip
 import json
 
+FILE_PATH="c:/Users/100-Days-of-Code-The-Complete-Python-Pro-Bootcamp/Day-29 & 30"
 
 # ---------------------------- PASSWORD GENERATOR ------------------------------- #
 def generate_password():
@@ -47,19 +48,19 @@ def save():
 
         if yes:
             try:
-                with open("data.json", mode="r") as data_file:
+                with open(f"{FILE_PATH}/data.json", mode="r") as data_file:
                     # Read old data
                     data = json.load(data_file)
 
             except FileNotFoundError:
-                with  open("data.json", mode="w") as data_file:
+                with  open(f"{FILE_PATH}/data.json", mode="w") as data_file:
                     json.dump(new_data, data_file, indent=4)
 
             else:
                 # Update old data
                 data.update(new_data)
 
-                with open("data.json", mode="w") as data_file:
+                with open(f"{FILE_PATH}/data.json", mode="w") as data_file:
                     # Saving the updated data
                     json.dump(data, data_file, indent=4)
 
@@ -74,7 +75,7 @@ def search_password():
     website = website_entry.get()
 
     try:
-        with open("data.json", mode="r") as data_file:
+        with open(f"{FILE_PATH}/data.json", mode="r") as data_file:
             data = json.load(data_file)
 
     except FileNotFoundError:
@@ -96,7 +97,7 @@ window.config(padx=50, pady=50)
 
 
 canvas = Canvas(width=200, height=200)
-img = PhotoImage(file="logo.png")
+img = PhotoImage(file=f"{FILE_PATH}/logo.png")
 canvas.create_image(100, 100, image=img)
 canvas.grid(row=0, column=1)
 
@@ -119,7 +120,7 @@ website_entry.focus()
 
 email_entry = Entry(width=35)
 email_entry.grid(row=2, column=1, columnspan=2, sticky="EW")
-email_entry.insert(0, "prit@gmail.com")
+email_entry.insert(0, "100DaysOfCode@testinganswers.com")
 
 password_entry = Entry(width=30)
 password_entry.grid(row=3, column=1, sticky="W")
