@@ -1,10 +1,18 @@
 {
     "Twitter": {
         "email": "100DaysOfCode@testinganswers.com",
-        "password": "+n9oRHlDwx9m)2!a"
+        "password": "E#$jp+95VdUyYp"
     },
     "Insta": {
         "email": "100DaysOfCode@testinganswers.com",
         "password": "8%#BPh89TNAtk&sq"
+    },
+    "Facebook": {
+        "email": "100DaysOfCode@testinganswers.com",
+        "password": "9n9oR+pPh5t$B"
+    },
+    "Yahoo": {
+        "email": "100DaysOfCode@testinganswers.com",
+        "password": "4JV2(rq$RJvJz%Q9"
     }
 }
