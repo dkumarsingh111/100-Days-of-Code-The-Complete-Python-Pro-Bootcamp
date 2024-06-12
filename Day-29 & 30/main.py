@@ -136,5 +136,4 @@ add_btn.grid(row=4, column=1, columnspan=2, sticky="EW")
 search_btn = Button(text="Search", command=search_password)
 search_btn.grid(row=1, column=2, sticky="EW")
 
-
 window.mainloop()
