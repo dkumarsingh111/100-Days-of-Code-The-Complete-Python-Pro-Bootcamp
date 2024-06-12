@@ -1,8 +1,11 @@
 fruits = eval(input())
 
 def make_pie(index):
-    fruit = fruits[index]
-    print(fruit + " pie")
+    try:
+        fruit = fruits[index]
+        print(fruit + " Pie")
+    except:
+        print("Fruit Pie")
 
 
 make_pie(4)
