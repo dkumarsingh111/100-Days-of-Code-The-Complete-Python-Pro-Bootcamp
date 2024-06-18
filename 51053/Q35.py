@@ -14,5 +14,5 @@ def f1(data):
 # obj = f1('CS 101')
 # dept, num = obj[0], obj[1]
 
-obj = f1('CS 101')
-dept, num = obj['dept'], obj['num']
+# obj = f1('CS 101')
+# dept, num = obj['dept'], obj['num']
