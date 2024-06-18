@@ -6,7 +6,7 @@ import pandas
 yes = True
 
 try:
-    data = pandas.read_csv("c:/Users/10278018/OneDrive - BD/100-Days-of-Code-The-Complete-Python-Pro-Bootcamp/Day-26/nato_phonetic_alphabet.csv")
+    data = pandas.read_csv("c:/Users/100-Days-of-Code-The-Complete-Python-Pro-Bootcamp/Day-30/nato_phonetic_alphabet.csv")
 
 except FileNotFoundError as err_msg:
     print(f"{err_msg}")

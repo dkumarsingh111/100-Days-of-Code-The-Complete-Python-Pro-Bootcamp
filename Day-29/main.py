@@ -4,7 +4,7 @@ from random import choice, randint, shuffle
 import pyperclip
 import json
 
-FILE_PATH="c:/Users/100-Days-of-Code-The-Complete-Python-Pro-Bootcamp/Day-29 & 30"
+FILE_PATH="c:/Users/100-Days-of-Code-The-Complete-Python-Pro-Bootcamp/Day-29"
 
 # ---------------------------- PASSWORD GENERATOR ------------------------------- #
 def generate_password():
