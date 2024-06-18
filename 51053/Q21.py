@@ -11,3 +11,10 @@ class class1:
 
 class1.f1()
 class1.f1()
+
+
+#Output:
+        # 2
+        # 2
+        # 3
+        # 2

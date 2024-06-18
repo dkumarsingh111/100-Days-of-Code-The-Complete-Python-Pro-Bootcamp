@@ -6,3 +6,9 @@ class MyObject(object):
 print(MyType.__class__)
 print(SubType.__class__)
 print(MyObject.__class__)
+
+
+#Output:
+        # <class 'type'>
+        # <class 'type'>
+        # <class 'type'>
