@@ -13,7 +13,7 @@ weekday = now.weekday()
 
 
 if weekday == 0:
-    with open("quotes.txt") as quote_file:
+    with open(f"{FILE_PATH}/quotes.txt") as quote_file:
         all_quotes = quote_file.readlines()
         quote = random.choice(all_quotes)
 
