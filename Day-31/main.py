@@ -3,7 +3,7 @@ import pandas as pd
 import random
 
 
-FILE_PATH="c:/Users/10278018/OneDrive - BD/100-Days-of-Code-The-Complete-Python-Pro-Bootcamp/Day-31"
+FILE_PATH="c:/Users/100-Days-of-Code-The-Complete-Python-Pro-Bootcamp/Day-31"
 BACKGROUND_COLOR = "#B1DDC6"
 current_card = {}
 to_learn = {}
