@@ -6,7 +6,7 @@ import smtplib
 
 MY_EMAIL = "exampleemail"
 MY_PASSWORD = "password"
-FILE_PATH="c:/Users/100-Days-of-Code-The-Complete-Python-Pro-Bootcamp/Day-31/Automated Monday motivation Emails"
+FILE_PATH="c:/Users/100-Days-of-Code-The-Complete-Python-Pro-Bootcamp/Day-31/Automated Birthday Wisher"
 
 
 today = datetime.now()

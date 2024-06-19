@@ -5,7 +5,7 @@ import random
 
 MY_EMAIL = "testing email address"
 MY_PASSWORD = "password"
-FILE_PATH="c:/Users/100-Days-of-Code-The-Complete-Python-Pro-Bootcamp/Day-31"
+FILE_PATH="c:/Users/100-Days-of-Code-The-Complete-Python-Pro-Bootcamp/Day-31/Automated Monday motivation Emails"
 
 
 now = dt.datetime.now()
