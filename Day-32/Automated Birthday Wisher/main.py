@@ -6,14 +6,14 @@ import smtplib
 
 MY_EMAIL = "exampleemail"
 MY_PASSWORD = "password"
-FILE_PATH="c:/Users/100-Days-of-Code-The-Complete-Python-Pro-Bootcamp/Day-31"
+FILE_PATH="c:/Users/100-Days-of-Code-The-Complete-Python-Pro-Bootcamp/Day-31/Automated Monday motivation Emails"
 
 
 today = datetime.now()
 today_tuple = (today.month, today.day)
 
 
-data = pd.read_csv("birthdays.csv")
+data = pd.read_csv(f"{FILE_PATH}/birthdays.csv")
 
 
 birthdays_dict = {(data_row["month"], data_row["day"]): data_row for (index, data_row) in data.iterrows()}
