@@ -2,7 +2,7 @@ from tkinter import *
 from quiz_brain import QuizBrain
 
 THEME_COLOR = "#375362"
-
+FILE_PATH="c:/Users/Git/100-Days-of-Code-The-Complete-Python-Pro-Bootcamp/Day-34"
 
 class QuizUserInterface:
 
@@ -28,11 +28,11 @@ class QuizUserInterface:
         )
         self.canvas.grid(row=1, column=0, columnspan=2, pady=50)
 
-        self.true_img = PhotoImage(file="images/true.png")
+        self.true_img = PhotoImage(file=f"{FILE_PATH}/images/true.png")
         self.true_btn = Button(image=self.true_img, highlightthickness=0, command=self.true_pressed)
         self.true_btn.grid(row=2, column=0)
 
-        self.false_img = PhotoImage(file="images/false.png")
+        self.false_img = PhotoImage(file=f"{FILE_PATH}/images/false.png")
         self.false_btn = Button(image=self.false_img, highlightthickness=0, command=self.false_pressed)
         self.false_btn.grid(row=2, column=1)
 
